@@ -25,11 +25,11 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'docs'
-BASE = 'https://chucky-42.github.io/huzur-vakti/'
+BASE = 'https://huzurvakti.github.io/'
 PLAY = 'https://play.google.com/store/apps/details?id=com.lutfu.huzurvakti'
 APPSTORE = 'https://apps.apple.com/app/id6818989611'
-PRIVACY = 'https://chucky-42.github.io/huzur-vakti-gizlilik/'
-SUPPORT = 'https://chucky-42.github.io/huzur-vakti-gizlilik/destek.html'
+PRIVACY = BASE + 'gizlilik/'
+SUPPORT = BASE + 'gizlilik/destek.html'
 KAABA = (21.4225, 39.8262)
 
 LANGS = ['tr', 'en', 'ar', 'fa', 'ur', 'bn', 'fr', 'id', 'ms', 'ru', 'sw', 'de', 'az', 'uz', 'bs']
@@ -860,9 +860,9 @@ def root_page(by_lang, strings, langs):
 
 def not_found():
     return '\n'.join([
-        head('en', 'Page not found – Huzur Vakti', 'This page does not exist.', BASE, '/huzur-vakti/'),
-        f'<body>{top("en", "/huzur-vakti/")}<main><div class="wrap"><h1>404</h1>',
-        '<p><a href="/huzur-vakti/">Huzur Vakti</a></p></div></main>', foot('en'), '</body></html>',
+        head('en', 'Page not found – Huzur Vakti', 'This page does not exist.', BASE, '/'),
+        f'<body>{top("en", "/")}<main><div class="wrap"><h1>404</h1>',
+        '<p><a href="/">Huzur Vakti</a></p></div></main>', foot('en'), '</body></html>',
     ])
 
 
@@ -904,6 +904,12 @@ def main():
     # Hand-written pages (e.g. /indir/: one link that opens AppGallery on Huawei, Play on other Android phones, App Store on iPhone).
     if (ROOT / 'pages').exists():
         shutil.copytree(ROOT / 'pages', OUT, dirs_exist_ok=True)
+    # The privacy policy and the support page are written in the app repo, next
+    # to the store texts that point at them; the site only serves them.
+    store = ROOT.parent / 'kod' / 'store'
+    (OUT / 'gizlilik').mkdir()
+    shutil.copy2(store / 'gizlilik-politikasi.html', OUT / 'gizlilik' / 'index.html')
+    shutil.copy2(store / 'destek.html', OUT / 'gizlilik' / 'destek.html')
 
     urls = [BASE]
     (OUT / 'index.html').write_text(root_page(by_lang, strings, langs), encoding='utf-8')

@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huzur Vakti — Gizlilik Politikası / Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem 4rem;
+    line-height: 1.65;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.25rem; }
+  .updated { color: #666; font-size: .9rem; margin-top: 0; }
+  .box { border-left: 3px solid #0E7C66; padding: .1rem 0 .1rem 1rem; margin: 1.5rem 0; }
+  code { background: rgba(128,128,128,.15); padding: .1rem .3rem; border-radius: 4px; }
+  footer { margin-top: 3rem; font-size: .85rem; color: #666; }
+  nav { font-size: .9rem; margin: 0 0 2rem; }
+  nav a { margin-right: .75rem; }
+  hr { margin: 3.5rem 0 2.5rem; border: 0; border-top: 1px solid rgba(128,128,128,.35); }
+</style>
+</head>
+<body>
+
+<nav><a href="#tr">Türkçe</a> · <a href="#en">English</a></nav>
+
+<section id="tr" lang="tr">
+
+<h1>Huzur Vakti — Gizlilik Politikası</h1>
+<p class="updated">Son güncelleme: 30 Ekim 2026</p>
+
+<div class="box">
+  <strong>Kısaca:</strong> Huzur Vakti hiçbir kişisel veri toplamaz, saklamaz veya
+  aktarmaz. Hesap açmanız gerekmez. Reklam ve analiz aracı içermez. Namaz vakti ve
+  kıble için konumunuz yalnızca telefonunuzun içinde kullanılır, hiçbir yere
+  gönderilmez. Tek istisna <strong>&quot;Camiler&quot; ekranıdır</strong>: yakındaki
+  camileri bulabilmek için yaklaşık konumunuz OpenStreetMap verisinden cami listesi almak üzere gönderilir.
+  O ekranı hiç açmazsanız bu da hiç olmaz.
+</div>
+
+<h2>Toplanan veriler</h2>
+<p>
+  Hiçbiri. Uygulama sunucumuz yoktur; sizin adınıza tutulan bir kayıt yoktur.
+  E-posta, telefon numarası, cihaz kimliği veya reklam kimliği toplanmaz.
+</p>
+<p>
+  Ayarlarda isteğe bağlı bir <strong>ad</strong> alanı vardır; yalnızca ana
+  sayfadaki selamlamada görünsün diye. Girerseniz telefonunuzda saklanır, hiçbir
+  isteğe eklenmez ve hiçbir yere gönderilmez. Boş bırakabilirsiniz.
+</p>
+
+<h2>Konum izni</h2>
+<p>
+  Uygulama, isteğe bağlı olarak <strong>yaklaşık konum</strong> izni ister
+  (<code>ACCESS_COARSE_LOCATION</code>). Hassas/GPS konum izni istenmez; namaz
+  vakti ve kıble için birkaç yüz metrelik doğruluk yeterlidir. İzin üç şey için
+  kullanılır:
+</p>
+<ul>
+  <li>Bulunduğunuz yere göre namaz vakitlerini hesaplamak &mdash; tamamen cihazınızda</li>
+  <li>Kıble yönünü hesaplamak &mdash; tamamen cihazınızda</li>
+  <li><strong>Yakındaki camileri bulmak &mdash; bu, konumunuzu dışarı gönderir</strong></li>
+</ul>
+<p>
+  İlk ikisinde konum bilgisi <strong>hiçbir sunucuya gönderilmez</strong> ve
+  üçüncü taraflarla paylaşılmaz. Tek bir şey telefonunuzda tutulur: GPS
+  kullanıyorsanız, son alınan konumunuzun iki ondalığa yuvarlanmış hâli (yaklaşık
+  1 km). Konum kapalıyken ya da alınamadığında vakitler ve ezan alarmları
+  İstanbul'a değil, bu son konuma göre sürsün diye saklanır; yeni konum
+  geldiğinde üzerine yazılır, şehri listeden seçtiğinizde silinir.
+</p>
+<p>
+  Üçüncüsü farklıdır ve bunu açıkça yazmak isteriz. &quot;Camiler&quot; sekmesinde
+  &quot;Yakındaki camileri bul&quot; düğmesine bastığınızda uygulama, OpenStreetMap
+  verisinden hazırladığımız cami dosyalarından bulunduğunuz bölgeye ait olanı
+  indirir: giden tek bilgi, yaklaşık 28 km&#39;lik bir karenin numarasıdır, koordinat
+  gönderilmez. Bu dosyalar <code>huzurvakti.github.io</code> (GitHub Pages) ya da
+  yedeği <code>cdn.jsdelivr.net</code> üzerinden gelir. İkisine de
+  ulaşılamazsa yaklaşık koordinatınız (yaklaşık 1 km&#39;ye yuvarlanmış)
+  OpenStreetMap&#39;in Overpass sunucusuna bir sorgu olarak gider
+  (<code>overpass-api.de</code>, <code>gall.openstreetmap.de</code>,
+  <code>lz4.overpass-api.de</code>). Harita karolarını çekerken bulunduğunuz bölge
+  <code>tile.openstreetmap.org</code> tarafından görülür.
+  Bu isteklerde adınız, kimliğiniz veya cihaz kimliğiniz gönderilmez.
+  Konumunuz uygulama tarafından kaydedilmez.
+</p>
+<p>
+  Bu yüzden izin uygulama açılışında değil, <strong>yalnızca o ekranda o düğmeye
+  bastığınızda</strong> istenir. Camiler ekranını hiç açmazsanız konumunuz hiçbir
+  zaman dışarı çıkmaz. İzni vermezseniz o ekran çalışmaz, uygulamanın geri kalanı
+  eskisi gibi çalışır; şehrinizi 90 ülke ve 600 şehir içeren listeden elle
+  seçersiniz.
+</p>
+
+<h2>Namaz vakitleri nasıl hesaplanır?</h2>
+<p>
+  Vakitler cihazınızda, astronomik hesapla bulunur — ülkenize göre o ülkenin kendi
+  dinî merciinin yöntemiyle (Türkiye için Diyanet, Malezya için JAKIM, Pakistan
+  için Karaçi ve benzeri). Bunun için internet bağlantısı gerekmez; uygulama
+  çevrimdışıyken de tam olarak çalışır.
+  </p>
+  <p>
+  <strong>Resmî takvim indirme:</strong> Hesaplama, bir merciin yayımladığı
+  takvimin yeniden üretimidir; merciin kendi bastığı takvim daha kesindir. Bu
+  yüzden, uygulamanın <em>zaten takip ettiği</em> merci o şehir için bir takvim
+  yayımlıyorsa, uygulama bunu yılda birkaç kez indirir ve cihazınızda saklar.
+  Bugün iki merci için geçerlidir: <strong>Diyanet</strong> (Türkiye ve
+  ayarlardan Diyanet yöntemini seçenler) ve <strong>JAKIM</strong> (Malezya).
+  Her kullanıcıya yalnızca <em>kendi</em> merciine istek yapılır: Malezyalı bir
+  kullanıcı için Diyanet'e, Türkiyeli bir kullanıcı için JAKIM'a
+  <strong>tek bir istek bile çıkmaz</strong>. Bunların dışında bir merciin
+  yöntemini kullanıyorsanız hiç istek yapılmaz, vakitler cihazınızda hesaplanır.
+  </p>
+  <p>
+  Bu indirmede <strong>seçtiğiniz şehrin adı</strong> ve indirme zamanı ilgili
+  merciin sunucusuna gitmiş olur; bunu bilmenizi isteriz. Kullanılan adresler:
+  <code>namazvakitleri.diyanet.gov.tr</code> ve
+  <code>vakithesaplama.diyanet.gov.tr</code> (Diyanet),
+  <code>www.e-solat.gov.my</code> (JAKIM). Adınız, kimliğiniz, cihaz
+  kimliğiniz veya konumunuz gönderilmez. İndirilen takvim yalnızca cihazınızda
+  saklanır ve internet olmadığında da kullanılır. Ayarlardan silebilirsiniz;
+  sildiğinizde uygulama kendi hesabına döner.
+</p>
+
+<h2>İnternet kullanımı</h2>
+<p>
+  Uygulama dört durumda internete bağlanır. Birincisi, yukarıda anlatılan resmî
+  takvim indirmesi. İkincisi, &quot;Camiler&quot; ekranında yakındaki camileri
+  sorma ve harita karolarını çekme &mdash; ayrıntısı yukarıda, Konum izni
+  başlığında. Üçüncüsü, Kur'an-ı Kerim ses kaydını
+  <em>siz indirmeyi seçtiğinizde</em>. Bu durumda seçtiğiniz surenin ses dosyası
+  <code>mp3quran.net</code> üzerinden indirilir. Bu istek sırasında kimliğinizi
+  belirten hiçbir bilgi gönderilmez. İndirilen dosyalar yalnızca cihazınızda saklanır
+  ve uygulama içinden silebilirsiniz.
+</p>
+<p>
+  Dördüncüsü, ana ekrandaki <strong>&quot;Günün videosu&quot;</strong> kartı.
+  Uygulama birkaç saatte bir kendi sitemizden (<code>huzurvakti.github.io</code>,
+  ulaşılamazsa aynı dosyanın <code>cdn.jsdelivr.net</code> kopyası) küçük bir
+  video listesi ve kapak resmi indirir; bu istekler de kimliğinizi belirten bilgi
+  taşımaz. Video, siz oynattığınızda uygulamanın içinde YouTube'un gizlilik dostu
+  oynatıcısıyla (<code>youtube-nocookie.com</code>) açılır. Bu kart YouTube API
+  Hizmetleri'ni kullanır: videoyu oynattığınızda
+  <a href="https://www.youtube.com/t/terms">YouTube Hizmet Şartları</a> ve
+  <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a>
+  geçerli olur. &quot;Beğen&quot; ve
+  &quot;Abone ol&quot; düğmeleri videoyu YouTube uygulamasında açar. Kartı ana
+  ekrandaki menüsünden ya da Ayarlar › Hakkında'dan kapatabilirsiniz.
+</p>
+
+<h2>Cihazınızda saklananlar</h2>
+<ul>
+  <li>Seçtiğiniz şehir ve bildirim tercihleriniz</li>
+  <li>GPS kullanıyorsanız son konumunuz, yaklaşık 1 km'ye yuvarlanmış olarak</li>
+  <li>İndirdiğiniz Kur'an ses dosyaları</li>
+  <li>İndirilmişse, merciin yayımladığı vakit takvimi ve (Diyanet için) dinî
+      günler listesi</li>
+  <li>Günün videosu listesinin son indirilen kopyası ve kartı gizleyip
+      gizlemediğiniz</li>
+</ul>
+<p>
+  Bunların tamamı cihazınızın kendi depolamasındadır. Uygulamayı kaldırdığınızda
+  cihazınızdan silinir.
+</p>
+<p>
+  <strong>Yedekleme hakkında:</strong> Android'in kendi yedekleme özelliği açıksa,
+  tercihleriniz (seçtiğiniz şehir ya da GPS'teki yaklaşık son konumunuz, bildirim
+  ayarları, kaza ve tesbihat kayıtlarınız)
+  Google hesabınıza yedeklenir ve yeni bir telefona kurduğunuzda geri gelir. Bu
+  bilinçli bir tercihtir: kaza kaydı yıllarca tutulmuş bir defter olabilir ve onu
+  telefon değiştirirken kaybettirmek bu uygulamanın yapabileceği en kötü şeydir.
+  Bu yedek <em>Google hesabınızda</em> durur, bizde değil — bizim sunucumuz yoktur
+  ve bu veriye erişimimiz yoktur. İndirdiğiniz Kur'an ses kayıtları yedeğe dâhil
+  edilmez. Yedeklemeyi istemiyorsanız Android ayarlarından kapatabilirsiniz.
+</p>
+
+<h2>Bildirimler</h2>
+<p>
+  Ezan bildirimleri tamamen cihaz içinde, telefonun alarm sistemiyle kurulur.
+  Bildirim göndermek için hiçbir sunucu veya push servisi kullanılmaz.
+</p>
+
+<h2>iPhone'da</h2>
+<p>
+  iPhone sürümü aynı kurallarla çalışır. Farkları şunlardır:
+</p>
+<ul>
+  <li>
+    <strong>Konum izni.</strong> İzin yalnızca &quot;Uygulamayı kullanırken&quot;
+    istenir; &quot;her zaman&quot; konum hiç istenmez. iOS bu izinle birlikte
+    &quot;tam konum&quot; seçeneğini de sunar; kapatabilirsiniz, namaz vakti ve
+    kıble için yaklaşık konum yeterlidir. Camiler ekranı, tam konum açık olsa
+    bile koordinatınızı iki ondalık basamağa (yaklaşık 1 km) yuvarlayarak
+    gönderir; mesafeler telefonunuzda hesaplanır.
+  </li>
+  <li>
+    <strong>Bildirimler.</strong> iPhone bir uygulamanın önceden kurabileceği
+    bildirim sayısını sınırladığı için ezan bildirimleri önümüzdeki günlere
+    kurulur. iOS izin verdiğinde uygulama arka planda kısa bir süre çalışıp bu
+    bildirimleri yeniler; bu sırada telefonda kayıtlı olanlar kullanılır ve
+    hiçbir yere istek yapılmaz.
+  </li>
+  <li>
+    <strong>Widget'lar.</strong> Ana ekran ve kilit ekranı widget'ları, uygulamanın
+    telefonda paylaşılan bir alana yazdığı vakitleri okur; bu alan telefondan çıkmaz.
+  </li>
+  <li>
+    <strong>iCloud yedeği.</strong> iPhone'un kendi iCloud yedeği uygulamanın
+    ayarlarını ve kaza defterini içerebilir; bu Apple'ın yedeğidir, bize bir şey
+    gelmez. İndirilen Kur'an ses kayıtları yedeğe bilerek dahil edilmez.
+  </li>
+</ul>
+
+<h2>Reklam ve analiz</h2>
+<p>Yoktur. Uygulamada reklam ağı, analiz veya çökme raporlama aracı bulunmaz.</p>
+
+<h2>Çocuklar</h2>
+<p>
+  Uygulama hiç kimseden veri toplamadığı için çocuklardan da veri toplamaz.
+</p>
+
+<h2>İçerik kaynakları ve lisanslar</h2>
+<ul>
+  <li>
+    Kur'an-ı Kerim Arapça metni: <a href="https://tanzil.net">Tanzil Projesi</a>,
+    değiştirilmeden kullanılmıştır.
+  </li>
+  <li>Türkçe meal: Elmalılı Hamdi Yazır (kamu malı).</li>
+  <li>İngilizce meal: Marmaduke Pickthall (kamu malı).</li>
+  <li>Endonezce meal: Kementerian Agama RI.</li>
+  <li>Malayca meal: Abdullah Muhammad Basmeih.</li>
+  <li>
+    Ezan kaydı: Mardin, Freesound kullanıcısı emrahddd
+    (<a href="https://freesound.org/s/168652/">ses 168652</a>),
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>
+    (kamu malı). CC0 atıf zorunluluğu getirmez; yine de kaydın nereden geldiği
+    burada yazılıdır.
+  </li>
+</ul>
+
+<h2>Değişiklikler</h2>
+<p>
+  Bu politika değişirse bu sayfa güncellenir ve yukarıdaki tarih değiştirilir.
+</p>
+
+<h2>İletişim</h2>
+<p>
+  Sorularınız için: <a href="mailto:huzurvaktiti.571@gmail.com">huzurvaktiti.571@gmail.com</a>
+</p>
+
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+
+<h1>Huzur Vakti — Privacy Policy</h1>
+<p class="updated">Last updated: 30 October 2026 · This is a translation of the
+Turkish text above, which is the original.</p>
+
+<div class="box">
+  <strong>In short:</strong> Huzur Vakti collects, stores and transmits no
+  personal data. You do not need an account. It contains no advertising and no
+  analytics. For prayer times and the qibla your location is used inside your
+  phone only and is never sent anywhere. The one exception is the
+  <strong>&quot;Mosques&quot; screen</strong>: to ask which mosques are nearby,
+  your approximate location is sent to fetch OpenStreetMap mosque data. If you never
+  open that screen, that never happens.
+</div>
+
+<h2>Data collected</h2>
+<p>
+  None. We run no server for this app; there is no record kept about you. No
+  email address, phone number, device identifier or advertising identifier is
+  collected.
+</p>
+<p>
+  Settings contain an optional <strong>name</strong> field, only so that the
+  greeting on the home screen can use it. If you fill it in, it stays on your
+  phone, is added to no request and is sent nowhere. You may leave it empty.
+</p>
+
+<h2>Location permission</h2>
+<p>
+  The app optionally asks for the <strong>approximate location</strong>
+  permission (<code>ACCESS_COARSE_LOCATION</code>). Precise/GPS location is
+  never requested; a few hundred metres of accuracy is enough for prayer times
+  and the qibla. The permission is used for three things:
+</p>
+<ul>
+  <li>Calculating prayer times for where you are &mdash; entirely on your device</li>
+  <li>Calculating the direction of the qibla &mdash; entirely on your device</li>
+  <li><strong>Finding nearby mosques &mdash; this one sends your location out</strong></li>
+</ul>
+<p>
+  For the first two, your location is <strong>sent to no server</strong> and is
+  not shared with third parties. One thing is kept on your phone: if you use GPS,
+  your last fix rounded to two decimal places (about 1 km). It is kept so that
+  when location is off or cannot be had, the times and the adhan alarms carry on
+  from that last place rather than from İstanbul; a new fix overwrites it, and
+  choosing a city from the list deletes it.
+</p>
+<p>
+  The third is different, and we would rather say so plainly. When you press
+  &quot;Find nearby mosques&quot; on the &quot;Mosques&quot; tab, your
+  app downloads the file for your area from mosque files we build from
+  OpenStreetMap data: all that leaves is the number of a square about 28 km
+  across, not a coordinate. The files come from <code>huzurvakti.github.io</code>
+  (GitHub Pages) or its mirror <code>cdn.jsdelivr.net</code>. Only if neither can
+  be reached do your approximate coordinates (rounded to about 1 km) go to
+  OpenStreetMap's Overpass server as a query (<code>overpass-api.de</code>,
+  <code>gall.openstreetmap.de</code>, <code>lz4.overpass-api.de</code>). While map
+  tiles are fetched, the area you are in is seen by
+  <code>tile.openstreetmap.org</code>. These requests carry no name, no identity
+  and no device identifier. Your location is not stored by the app.
+</p>
+<p>
+  This is why the permission is requested not at launch but
+  <strong>only when you press that button on that screen</strong>. If you never
+  open the Mosques screen, your location never leaves the phone. If you decline
+  the permission, that screen does not work and the rest of the app carries on
+  as before; you pick your city by hand from a list of 90 countries and 600
+  cities.
+</p>
+
+<h2>How prayer times are calculated</h2>
+<p>
+  Times are found on your device by astronomical calculation, using the method
+  of the religious authority of your own country (Diyanet for Türkiye, JAKIM for
+  Malaysia, Karachi for Pakistan, and so on). No internet connection is needed
+  for this; the app works fully offline.
+</p>
+<p>
+  <strong>Downloading an official timetable:</strong> a calculation is a
+  reproduction of the timetable an authority publishes, and the authority's own
+  printed timetable is more exact. So if the authority the app
+  <em>already follows</em> publishes a timetable for your city, the app
+  downloads it a few times a year and keeps it on your device. Today this
+  applies to two authorities: <strong>Diyanet</strong> (Türkiye, and anyone who
+  picks the Diyanet method in settings) and <strong>JAKIM</strong> (Malaysia).
+  Each user's request only ever goes to <em>their own</em> authority:
+  <strong>not a single request</strong> goes to Diyanet for a Malaysian user, or
+  to JAKIM for a user in Türkiye. If you use any other authority's method, no
+  request is made at all and the times are calculated on your device.
+</p>
+<p>
+  In that download, <strong>the name of the city you chose</strong> and the time
+  of the download do reach that authority's server, and we want you to know it.
+  The addresses used are <code>namazvakitleri.diyanet.gov.tr</code> and
+  <code>vakithesaplama.diyanet.gov.tr</code> (Diyanet), and
+  <code>www.e-solat.gov.my</code> (JAKIM). Your name, your identity, your device
+  identifier and your location are not sent. The downloaded timetable is kept on
+  your device only and is used when there is no internet. You can delete it from
+  settings; if you do, the app goes back to its own calculation.
+</p>
+
+<h2>Use of the internet</h2>
+<p>
+  The app connects to the internet in four cases. First, the official timetable
+  download described above. Second, asking for nearby mosques and fetching map
+  tiles on the &quot;Mosques&quot; screen &mdash; described above under Location
+  permission. Third, Qur'an audio, <em>when you choose to download it</em>: the
+  audio file of the sura you picked is downloaded from <code>mp3quran.net</code>.
+  No information identifying you is sent with that request. Downloaded files are
+  kept on your device only and can be deleted from inside the app.
+</p>
+<p>
+  Fourth, the <strong>&quot;Video of the Day&quot;</strong> card on the home
+  screen. Every few hours the app downloads a small list of videos and a cover
+  picture from our own website (<code>huzurvakti.github.io</code>, or the same
+  file on <code>cdn.jsdelivr.net</code> if that cannot be reached); these
+  requests carry no information identifying you either. When you play the video,
+  it opens inside the app in YouTube's privacy-enhanced player
+  (<code>youtube-nocookie.com</code>). This card uses YouTube API Services: when
+  you play a video, the <a href="https://www.youtube.com/t/terms">YouTube Terms
+  of Service</a> and the <a href="https://policies.google.com/privacy">Google
+  Privacy Policy</a> apply. The &quot;Like&quot; and &quot;Subscribe&quot; buttons
+  open the video in the YouTube app. You can turn the card off from its menu on
+  the home screen or in Settings › About.
+</p>
+
+<h2>What is kept on your device</h2>
+<ul>
+  <li>The city you chose and your notification preferences</li>
+  <li>If you use GPS, your last location, rounded to about 1 km</li>
+  <li>The Qur'an audio files you downloaded</li>
+  <li>If downloaded, the authority's published timetable and (for Diyanet) the
+      list of religious days</li>
+  <li>The last downloaded copy of the Video of the Day list, and whether you
+      have hidden the card</li>
+</ul>
+<p>
+  All of it lives in your device's own storage. Uninstalling the app removes it
+  from your device.
+</p>
+<p>
+  <strong>About backup:</strong> if Android's own backup feature is on, your
+  preferences (chosen city or your approximate last GPS location, notification
+  settings, your missed-prayer and dhikr records) are backed up to your Google account and come back when you install
+  the app on a new phone. This is deliberate: a missed-prayer ledger can be a
+  record kept for years, and losing it when someone changes phones is the worst
+  thing this app could do. That backup sits in <em>your Google account</em>, not
+  with us — we have no server and no access to it. Downloaded Qur'an audio is
+  not included in the backup. If you do not want the backup, you can turn it off
+  in Android's settings.
+</p>
+
+<h2>Notifications</h2>
+<p>
+  Adhan notifications are set entirely on the device, using the phone's own alarm
+  system. No server and no push service is used to deliver them.
+</p>
+
+<h2>On iPhone</h2>
+<p>
+  The iPhone version follows the same rules. The differences:
+</p>
+<ul>
+  <li>
+    <strong>Location permission.</strong> Only &quot;While Using the App&quot; is
+    asked for; &quot;Always&quot; never is. iOS offers a &quot;Precise
+    Location&quot; switch with that permission; you may turn it off, as an
+    approximate location is enough for prayer times and the qibla. The mosques
+    screen rounds your coordinates to two decimal places (about 1 km) before
+    sending them, even with precise location on; distances are worked out on
+    your phone.
+  </li>
+  <li>
+    <strong>Notifications.</strong> iPhone limits how many notifications an app
+    can schedule ahead, so adhan notifications are set for the coming days. When
+    iOS allows it, the app runs briefly in the background to renew them; it uses
+    what is already stored on the phone and makes no request to anyone.
+  </li>
+  <li>
+    <strong>Widgets.</strong> The home screen and lock screen widgets read the
+    times the app writes to a shared area on the phone; that area never leaves it.
+  </li>
+  <li>
+    <strong>iCloud backup.</strong> The iPhone's own iCloud backup may include the
+    app's settings and the missed-prayer ledger; that is Apple's backup, and
+    nothing of it reaches us. Downloaded Quran recitations are deliberately kept
+    out of the backup.
+  </li>
+</ul>
+
+<h2>Advertising and analytics</h2>
+<p>None. The app contains no ad network, no analytics and no crash reporting.</p>
+
+<h2>Children</h2>
+<p>
+  Because the app collects no data from anyone, it collects none from children
+  either.
+</p>
+
+<h2>Content sources and licences</h2>
+<ul>
+  <li>
+    Arabic text of the Qur'an: <a href="https://tanzil.net">the Tanzil Project</a>,
+    used unmodified.
+  </li>
+  <li>Turkish translation: Elmalılı Hamdi Yazır (public domain).</li>
+  <li>English translation: Marmaduke Pickthall (public domain).</li>
+  <li>Indonesian translation: Kementerian Agama RI.</li>
+  <li>Malay translation: Abdullah Muhammad Basmeih.</li>
+  <li>
+    Adhan recording: Mardin, by Freesound user emrahddd
+    (<a href="https://freesound.org/s/168652/">sound 168652</a>),
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>
+    (public domain). CC0 requires no attribution; even so, where the recording
+    came from is written here.
+  </li>
+</ul>
+
+<h2>Changes</h2>
+<p>
+  If this policy changes, this page is updated and the date above is changed.
+</p>
+
+<h2>Contact</h2>
+<p>
+  For questions: <a href="mailto:huzurvaktiti.571@gmail.com">huzurvaktiti.571@gmail.com</a>
+</p>
+
+</section>
+
+<footer>Huzur Vakti · Namaz vakitleri, kıble, hicri takvim ve Kur'an-ı Kerim ·
+Prayer times, qibla, the Hijri calendar and the Qur'an</footer>
+
+</body>
+</html>

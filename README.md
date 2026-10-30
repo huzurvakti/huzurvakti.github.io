@@ -1,6 +1,8 @@
 # Huzur Vakti — şehir sayfaları
 
-https://chucky-42.github.io/huzur-vakti/
+https://huzurvakti.github.io/ (depo `huzurvakti/huzurvakti.github.io`)
+
+30 Eki 2026'ya kadar site `Chucky-42/huzur-vakti` deposunda, chucky-42.github.io/huzur-vakti/ adresindeydi; o depo artık yalnız yönlendirme sayfaları ve uygulamanın eski sürümlerinin okuduğu `video/` dosyalarını tutar (`eski_adres.py`). Gizlilik politikası ve destek sayfası `/gizlilik/` altında; kaynakları uygulama deposunda `store/gizlilik-politikasi.html` ve `store/destek.html`, build.py kopyalar.
 
 Her şehir için o şehrin namaz vakitleri (bugün + ay tablosu), kıble açısı ve uygulamanın mağaza bağlantıları; 11 dilde.
 
