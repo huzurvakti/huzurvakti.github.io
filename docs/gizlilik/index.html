@@ -29,13 +29,16 @@
 <section id="tr" lang="tr">
 
 <h1>Huzur Vakti — Gizlilik Politikası</h1>
-<p class="updated">Son güncelleme: 30 Ekim 2026</p>
+<p class="updated">Son güncelleme: 18 Kasım 2026</p>
 
 <div class="box">
   <strong>Kısaca:</strong> Huzur Vakti hiçbir kişisel veri toplamaz, saklamaz veya
   aktarmaz. Hesap açmanız gerekmez. Reklam ve analiz aracı içermez. Namaz vakti ve
   kıble için konumunuz yalnızca telefonunuzun içinde kullanılır, hiçbir yere
-  gönderilmez. Tek istisna <strong>&quot;Camiler&quot; ekranıdır</strong>: yakındaki
+  gönderilmez. İki istisna vardır. <strong>Hava durumu</strong>: ana ekranda gerçek
+  havayı göstermek için şehrinizin ya da yaklaşık konumunuzun koordinatı, yaklaşık
+  1 km'ye yuvarlanarak Norveç Meteoroloji Enstitüsü'ne (MET Norway) gönderilir;
+  Ayarlar › Tema'dan kapatabilirsiniz. <strong>&quot;Camiler&quot; ekranı</strong>: yakındaki
   camileri bulabilmek için yaklaşık konumunuz OpenStreetMap verisinden cami listesi almak üzere gönderilir.
   O ekranı hiç açmazsanız bu da hiç olmaz.
 </div>
@@ -63,6 +66,11 @@
   <li>Kıble yönünü hesaplamak &mdash; tamamen cihazınızda</li>
   <li><strong>Yakındaki camileri bulmak &mdash; bu, konumunuzu dışarı gönderir</strong></li>
 </ul>
+<p>
+  Ana ekrandaki hava durumu da yaklaşık bir koordinat gönderir; bu izinden bağımsızdır,
+  çünkü listeden seçtiğiniz şehrin koordinatıyla da çalışır. Ayrıntısı aşağıda,
+  İnternet kullanımı başlığında.
+</p>
 <p>
   İlk ikisinde konum bilgisi <strong>hiçbir sunucuya gönderilmez</strong> ve
   üçüncü taraflarla paylaşılmaz. Tek bir şey telefonunuzda tutulur: GPS
@@ -126,7 +134,7 @@
 
 <h2>İnternet kullanımı</h2>
 <p>
-  Uygulama dört durumda internete bağlanır. Birincisi, yukarıda anlatılan resmî
+  Uygulama şu durumlarda internete bağlanır. Birincisi, yukarıda anlatılan resmî
   takvim indirmesi. İkincisi, &quot;Camiler&quot; ekranında yakındaki camileri
   sorma ve harita karolarını çekme &mdash; ayrıntısı yukarıda, Konum izni
   başlığında. Üçüncüsü, Kur'an-ı Kerim ses kaydını
@@ -134,6 +142,17 @@
   <code>mp3quran.net</code> üzerinden indirilir. Bu istek sırasında kimliğinizi
   belirten hiçbir bilgi gönderilmez. İndirilen dosyalar yalnızca cihazınızda saklanır
   ve uygulama içinden silebilirsiniz.
+</p>
+<p>
+  Bir de <strong>hava durumu</strong> (sürüm 3.36.0'dan itibaren). Ana ekrandaki canlı gökyüzü
+  gerçek havayı gösterir: bunun için uygulama, seçtiğiniz şehrin ya da yaklaşık konumunuzun
+  koordinatını <strong>iki ondalığa (yaklaşık 1 km) yuvarlayarak</strong> Norveç Meteoroloji
+  Enstitüsü'nün tahmin servisine (<code>api.met.no</code>) gönderir. Uygulama açıkken en fazla
+  yarım saatte bir istenir; arka planda istenmez. İstekte adınız, kimliğiniz veya cihaz
+  kimliğiniz yoktur; servisin kuralı gereği yalnızca uygulamanın adı ve geliştiricinin
+  iletişim adresi bildirilir. Gelen tahmin yalnızca telefonunuzda saklanır. Bu özelliği
+  <strong>Ayarlar › Tema</strong>'daki &quot;Gökyüzünde gerçek hava&quot; anahtarıyla
+  kapatabilirsiniz; kapalıyken hava için hiçbir istek gönderilmez.
 </p>
 
 <h2>Cihazınızda saklananlar</h2>
@@ -224,6 +243,10 @@
     (kamu malı). CC0 atıf zorunluluğu getirmez; yine de kaydın nereden geldiği
     burada yazılıdır.
   </li>
+  <li>
+    Hava durumu verisi: <a href="https://api.met.no/">MET Norway</a> (Norveç Meteoroloji
+    Enstitüsü), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+  </li>
 </ul>
 
 <h2>Değişiklikler</h2>
@@ -243,15 +266,18 @@
 <section id="en" lang="en">
 
 <h1>Huzur Vakti — Privacy Policy</h1>
-<p class="updated">Last updated: 30 October 2026 · This is a translation of the
+<p class="updated">Last updated: 18 November 2026 · This is a translation of the
 Turkish text above, which is the original.</p>
 
 <div class="box">
   <strong>In short:</strong> Huzur Vakti collects, stores and transmits no
   personal data. You do not need an account. It contains no advertising and no
   analytics. For prayer times and the qibla your location is used inside your
-  phone only and is never sent anywhere. The one exception is the
-  <strong>&quot;Mosques&quot; screen</strong>: to ask which mosques are nearby,
+  phone only and is never sent anywhere. There are two exceptions. The
+  <strong>weather</strong>: to show the real weather on the home screen, the
+  coordinates of your city or approximate location, rounded to about 1 km, are sent
+  to the Norwegian Meteorological Institute (MET Norway); you can turn this off in
+  Settings › Theme. The <strong>&quot;Mosques&quot; screen</strong>: to ask which mosques are nearby,
   your approximate location is sent to fetch OpenStreetMap mosque data. If you never
   open that screen, that never happens.
 </div>
@@ -280,6 +306,11 @@ Turkish text above, which is the original.</p>
   <li>Calculating the direction of the qibla &mdash; entirely on your device</li>
   <li><strong>Finding nearby mosques &mdash; this one sends your location out</strong></li>
 </ul>
+<p>
+  The weather on the home screen also sends approximate coordinates; it does not depend
+  on this permission, since it works with the coordinates of a city picked from the
+  list as well. Details below, under Use of the internet.
+</p>
 <p>
   For the first two, your location is <strong>sent to no server</strong> and is
   not shared with third parties. One thing is kept on your phone: if you use GPS,
@@ -344,13 +375,25 @@ Turkish text above, which is the original.</p>
 
 <h2>Use of the internet</h2>
 <p>
-  The app connects to the internet in four cases. First, the official timetable
+  The app connects to the internet in these cases. First, the official timetable
   download described above. Second, asking for nearby mosques and fetching map
   tiles on the &quot;Mosques&quot; screen &mdash; described above under Location
   permission. Third, Qur'an audio, <em>when you choose to download it</em>: the
   audio file of the sura you picked is downloaded from <code>mp3quran.net</code>.
   No information identifying you is sent with that request. Downloaded files are
   kept on your device only and can be deleted from inside the app.
+</p>
+<p>
+  And the <strong>weather</strong> (from version 3.36.0). The living sky on the home
+  screen shows the real weather: for that the app sends the coordinates of your chosen
+  city or approximate location, <strong>rounded to two decimals (about 1 km)</strong>,
+  to the forecast service of the Norwegian Meteorological Institute
+  (<code>api.met.no</code>). It is asked at most every half hour while the app is open,
+  never in the background. The request carries no name, identity or device identifier;
+  as the service requires, only the app's name and the developer's contact address are
+  given. The forecast that comes back is kept on your phone only. You can turn this off
+  with the &quot;Real weather in the sky&quot; switch under <strong>Settings › Theme</strong>;
+  while it is off, no weather request is sent.
 </p>
 
 <h2>What is kept on your device</h2>
@@ -442,6 +485,10 @@ Turkish text above, which is the original.</p>
     <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>
     (public domain). CC0 requires no attribution; even so, where the recording
     came from is written here.
+  </li>
+  <li>
+    Weather data: <a href="https://api.met.no/">MET Norway</a> (the Norwegian
+    Meteorological Institute), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
   </li>
 </ul>
 
