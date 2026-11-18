@@ -17,7 +17,11 @@
 // iPhone → App Store. ?k=youtube gibi bir kaynak verilirse Play'e referrer olarak geçer.
 (function () {
   var ua = navigator.userAgent || "", k = (new URLSearchParams(location.search).get("k") || "web").replace(/[^a-z0-9_-]/gi, "");
-  var play = "https://play.google.com/store/apps/details?id=com.lutfu.huzurvakti&referrer=" + encodeURIComponent("utm_source=" + k + "&utm_medium=akilli_link");
+  // utm_source/utm_campaign on the store link itself are what Play Console's
+  // store-listing acquisition report reads; referrer= only reaches the app's
+  // install referrer. Both, so a TikTok or Instagram visit shows up as such
+  // in the console (war report, 18 Nov 2026: every visit read "No UTM").
+  var play = "https://play.google.com/store/apps/details?id=com.lutfu.huzurvakti&utm_source=" + k + "&utm_medium=akilli_link&utm_campaign=" + k + "&referrer=" + encodeURIComponent("utm_source=" + k + "&utm_medium=akilli_link");
   var ios = "https://apps.apple.com/app/id6818989611";
   var hw = "https://appgallery.huawei.com/app/C119437405";
   var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && "ontouchend" in document);
