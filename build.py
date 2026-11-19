@@ -678,7 +678,7 @@ def city_page(c, by_lang, strings, start, today):
     header_cells = ''.join(f'<th>{esc(n)}</th>' for n in p)
     others = [o for o in by_lang[lang] if o is not c]
     body = [
-        head(lang, title, desc, url, rel, jsonld=crumbs),
+        head(lang, title, desc, url, rel, alternates=city_alternates(c), jsonld=crumbs),
         f'<body>{top(lang, rel)}<main><div class="wrap">',
         f'<p class="crumbs"><a href="{rel}{lang}/">{esc(t["index_h1"])}</a> › {esc(c["countryNames"][lang])}</p>',
         f'<h1>{esc(t["h1"].format(city=name))}</h1>',
@@ -767,7 +767,7 @@ def ramadan_page(c, by_lang, strings, start, ramadan):
                 + ',year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());'
                 'var r=document.querySelector(\'tr[data-date="\'+d+\'"]\');if(r)r.className="now";}catch(e){}})();</script>')
     return '\n'.join([
-        head(lang, title, desc, url, rel, jsonld=crumbs),
+        head(lang, title, desc, url, rel, alternates=city_alternates(c, ramadan_slug(ramadan) + '/'), jsonld=crumbs),
         f'<body>{top(lang, rel)}<main><div class="wrap">',
         f'<p class="crumbs"><a href="{rel}{lang}/">{esc(t["index_h1"])}</a> › <a href="{rel}{lang}/{c["slug"]}/">{esc(name)}</a></p>',
         f'<h1>{esc(r["h1"].format(city=name, year=year))}</h1>',
@@ -815,6 +815,16 @@ APP_JSONLD = {
 
 def language_alternates(langs):
     return [(l, f'{BASE}{l}/') for l in langs] + [('x-default', BASE)]
+
+
+def city_alternates(c, tail=''):
+    """hreflang for a city the site carries in more than one language (Berlin
+    in Turkish and German): every version names all of them, itself included,
+    as Google asks. A city in one language only gets none."""
+    versions = c.get('versions', [])
+    if len(versions) < 2:
+        return None
+    return [(l, f'{BASE}{l}/{slug}/{tail}') for l, slug in versions]
 
 
 def language_page(lang, by_lang, strings, langs):
@@ -890,6 +900,15 @@ def main():
             continue
         seen.add(key)
         by_lang[c['lang']].append(c)
+    # The same city in several languages (92 in Nov 2026, mostly Turkish and
+    # German pages for German cities) shares its id; hreflang links them.
+    versions = {}
+    for lang in langs:
+        for c in by_lang[lang]:
+            versions.setdefault(c['id'], []).append((lang, c['slug']))
+    for lang in langs:
+        for c in by_lang[lang]:
+            c['versions'] = versions[c['id']]
 
     if OUT.exists():
         shutil.rmtree(OUT)
